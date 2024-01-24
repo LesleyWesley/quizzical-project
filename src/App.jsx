@@ -17,7 +17,7 @@ function App() {
       <div className="app">
         {titlePage ?
            <TitlePage handleToggle={togglePage}/> :
-           <QuizPage />
+           <QuizPage page={titlePage}/>
         }
       </div>
     )

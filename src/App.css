@@ -1,6 +1,10 @@
 :root {
   --correct-answer-color: #A0F1EA;
-
+  --app-bg-clr: #edf2fb;
+  --main-text-clr: #293264;
+  --accent-clr: #8900f2;
+  --light-main-clr: rgba(41, 50, 100, 25%);
+  --light-accent-clr: rgba(137, 0, 242, 25%);
 }
 
 * {
@@ -9,7 +13,8 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 1rem 0;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -18,7 +23,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Karla", sans-serif;
-  color: #293264;
+  color: var(--main-text-clr);
 
 }
 
@@ -30,12 +35,12 @@ body {
 }
 
 .app {
-  background-color: #edf2fb;
+  background-color: var(--app-bg-clr);
   padding: 2rem;
   border-radius: .5rem;
   width: 90%;
   max-width: 600px;
-  box-shadow: 2px 2px 5px #8900f2;
+  box-shadow: 2px 2px 5px var(--accent-clr);
 }
 
 .title-page-container {
@@ -57,15 +62,75 @@ h1 {
 .start-button {
   padding: 1rem 3rem;
   font-size: 1rem;
-  background-color: #8900f2;
-  border: 2px solid #8900f2;;
-  color: #edf2fb;
+  background-color: var(--accent-clr);
+  border: 2px solid var(--accent-clr);
+  color: var(--app-bg-clr);
   border-radius: .5rem;
 }
 
 .start-button:active,
 .start-button:hover {
   cursor: pointer;
-  color: #8900f2;
-  background-color: #edf2fb;
+  color: var(--accent-clr);
+  background-color: var(--app-bg-clr);
+}
+
+/*Questions Styling*/
+
+.question-container {
+  border-bottom: 2px solid var(--light-main-clr);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.options-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+
+.option-button {
+  padding: .5rem 1rem;
+  border: 1px solid var(--main-text-clr);
+  color: var(--main-text-clr);
+  background-color: var(--app-bg-clr);
+  border-radius: .5rem;
+  font-size: .75rem;
+}
+
+.option-button.selected {
+  background-color: var(--light-accent-clr);
+  border: 1px solid var(--light-accent-clr);
+}
+
+.option-button:active,
+.option-button:hover {
+  cursor: pointer;
+  color: var(--app-bg-clr);
+  border-color: var(--accent-clr);
+  background-color: var(--accent-clr);
+  transform: scale(105%);
+}
+
+@media (min-width: 700px) {
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .options-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+  }
+
 }
