@@ -68,7 +68,7 @@ h1 {
   border-radius: .5rem;
 }
 
-.start-button:active,
+.start-button:focus,
 .start-button:hover {
   cursor: pointer;
   color: var(--accent-clr);
@@ -112,7 +112,7 @@ h2 {
   border: 1px solid var(--light-accent-clr);
 }
 
-.option-button:active,
+.option-button:focus,
 .option-button:hover {
   cursor: pointer;
   color: var(--app-bg-clr);
