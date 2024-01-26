@@ -1,9 +1,9 @@
 import React from "react"
 
-function Question() {
+function Question(props) {
   return (
     <div className="question-container">
-      <h2>Which best selling toy of 1983 caused hysteria, resulting in riots breaking in stores?</h2>
+      <h2>{props.question}</h2>
       <div className="options-container">
           <button type="button" className="option-button selected">Cabbage Patch Kids</button>
           <button type="button" className="option-button">Transformers</button>
