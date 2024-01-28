@@ -5,10 +5,17 @@ function Question(props) {
     <div className="question-container">
       <h2>{props.question}</h2>
       <div className="options-container">
-          <button type="button" className="option-button selected">Cabbage Patch Kids</button>
-          <button type="button" className="option-button">Transformers</button>
-          <button type="button" className="option-button">Care Bears</button>
-          <button type="button" className="option-button">Rubik's Cube</button>
+          <label>
+              <input
+                type="radio"
+                id="Cabbage Patch Kids" //needs a prop
+                name="option" //needs to be different for every question
+                value="Cabbage Patch Kids" //needs a prop
+                //needs a checked value once state is written
+                //needs an onChange value once state is written
+              />
+              Cabbage Patch Kids
+          </label>
       </div>
     </div>
   )

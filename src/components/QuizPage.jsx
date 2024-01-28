@@ -1,4 +1,5 @@
 import React from "react"
+import { decode } from "html-entities"
 import Question from "/src/components/Question.jsx"
 
 function QuizPage() {
@@ -9,6 +10,8 @@ function QuizPage() {
       console.log("effect ran")
       fetch("https://opentdb.com/api.php?amount=5&type=multiple").then(res => res.json()).then(data => setQuestionsData(data.results))
   }, [])
+
+  console.log(questionsData)
 
 const questionsElement = questionsData.map(item => {
   return (

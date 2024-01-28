@@ -89,37 +89,47 @@ h2 {
 
 .options-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.5rem;
 }
 
+/*Styling for Option Buttons*/
 
-.option-button {
-  padding: .5rem 1rem;
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   border: 1px solid var(--main-text-clr);
-  color: var(--main-text-clr);
-  background-color: var(--app-bg-clr);
-  border-radius: .5rem;
-  font-size: .75rem;
+  padding: .25rem .75rem;
+  border-radius: .75rem;
 }
 
-.option-button.selected {
-  background-color: var(--light-accent-clr);
-  border: 1px solid var(--light-accent-clr);
-}
-
-.option-button:focus,
-.option-button:hover {
-  cursor: pointer;
-  color: var(--app-bg-clr);
+label:hover,
+label:focus {
+  color: var(--accent-clr);
   border-color: var(--accent-clr);
-  background-color: var(--accent-clr);
-  transform: scale(105%);
+  box-shadow: 2px 2px 5px var(--accent-clr);
 }
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--app-bg-clr);
+  margin: 0;
+  position: absolute;
+}
+
+label:focus-within {
+  background-color: var(--accent-clr);
+  border-color: var(--accent-clr);
+  color: var(--app-bg-clr);
+}
+
 
 @media (min-width: 700px) {
 
