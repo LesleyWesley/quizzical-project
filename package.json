@@ -12,6 +12,7 @@
   "dependencies": {
     "he": "^1.2.0",
     "html-entities": "^2.4.0",
+    "nanoid": "^3.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

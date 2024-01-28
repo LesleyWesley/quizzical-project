@@ -1,5 +1,6 @@
 import React from "react"
 import { decode } from "html-entities"
+import { nanoid } from "nanoid"
 import Question from "/src/components/Question.jsx"
 
 function QuizPage() {
@@ -15,7 +16,13 @@ function QuizPage() {
 
 const questionsElement = questionsData.map(item => {
   return (
-    <Question question={item.question} key={item.question} incorrect={item.incorrect_answers} correct={item.correct_answer}/>
+    <Question
+        question={item.question}
+        key={nanoid()}
+        incorrect={item.incorrect_answers}
+        correct={item.correct_answer}
+        name={nanoid()}
+    />
   )
 })
 

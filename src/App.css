@@ -93,7 +93,7 @@ h2 {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: .5rem;
   margin-top: 1.5rem;
 }
 
@@ -115,6 +115,7 @@ label:focus {
   color: var(--accent-clr);
   border-color: var(--accent-clr);
   box-shadow: 2px 2px 5px var(--accent-clr);
+  cursor: pointer;
 }
 
 input[type="radio"] {
