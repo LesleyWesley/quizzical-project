@@ -1,6 +1,18 @@
 import React from "react"
 
 function Question(props) {
+
+  //Builds array of answers
+  const randomI = Math.floor(Math.random() * 4);
+  const allAnswersArray = []
+  for (let i = 0; i < props.incorrect.length; i++) {
+    allAnswersArray.push(props.incorrect[i])
+  }
+  allAnswersArray.splice(randomI, 0, props.correct)
+
+  //Maps over allAnswersArray to return a radio input for each option
+
+
   return (
     <div className="question-container">
       <h2>{props.question}</h2>

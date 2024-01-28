@@ -15,7 +15,7 @@ function QuizPage() {
 
 const questionsElement = questionsData.map(item => {
   return (
-    <Question question={item.question} key={item.question}/>
+    <Question question={item.question} key={item.question} incorrect={item.incorrect_answers} correct={item.correct_answer}/>
   )
 })
 
