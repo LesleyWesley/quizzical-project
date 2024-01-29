@@ -13,17 +13,18 @@ function Question(props) {
 
   //Maps over allAnswersArray to return a radio input for each option
   const optionElements = allAnswersArray.map( option => {
+    console.log(props.question)
     return (
       <label key={option}>
           <input
             type="radio"
             id={option}
             name={props.question} //needs to be different for every question
-            value={option} 
+            value={option}
             //needs a checked value once state is written
             //needs an onChange value once state is written
           />
-          {option}
+          <span className="option-button">{option}</span>
       </label>
     )
   })
