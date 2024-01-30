@@ -29,7 +29,7 @@ function Question(props) {
     )
   })
 
-
+//Actual component
   return (
     <div className="question-container">
       <h2>{decode(props.question)}</h2>

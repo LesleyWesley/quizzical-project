@@ -2,6 +2,7 @@ import React from "react"
 import { decode } from "html-entities"
 import { nanoid } from "nanoid"
 import Question from "/src/components/Question.jsx"
+import Footer from "/src/components/Footer.jsx"
 
 function QuizPage() {
 
@@ -14,22 +15,23 @@ function QuizPage() {
 
   console.log(questionsData)
 
-const questionsElement = questionsData.map(item => {
-  return (
-    <Question
-        question={item.question}
-        key={nanoid()}
-        incorrect={item.incorrect_answers}
-        correct={item.correct_answer}
-        name={nanoid()}
-    />
-  )
-})
+  const questionsElement = questionsData.map(item => {
+    return (
+      <Question
+          question={item.question}
+          key={nanoid()}
+          incorrect={item.incorrect_answers}
+          correct={item.correct_answer}
+          name={nanoid()}
+      />
+    )
+  })
 
   return (
-    <div className="quiz-page-container">
+    <form className="quiz-page-container">
         {questionsElement}
-    </div>
+        <Footer/>
+    </form>
   )
 }
 
