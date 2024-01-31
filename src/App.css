@@ -152,12 +152,9 @@ footer {
   align-items: center;
 }
 
-.check-answers {
-  display: none;
-}
 
 .footer--graded-div {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
