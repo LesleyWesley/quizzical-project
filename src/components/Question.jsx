@@ -19,7 +19,7 @@ function Question(props) {
           <input
             type="radio"
             id={option}
-            name={props.question} //needs to be different for every question
+            name={props.name} //needs to be different for every question
             value={option}
             //needs a checked value once state is written
             //needs an onChange value once state is written

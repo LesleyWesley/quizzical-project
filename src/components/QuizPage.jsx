@@ -7,6 +7,7 @@ import Footer from "/src/components/Footer.jsx"
 function QuizPage() {
 
   const [questionsData, setQuestionsData] = React.useState([])
+  const [userAnswers, setUserAnswers] = React.useState({})
 
   React.useEffect(function() {
       console.log("effect ran")
