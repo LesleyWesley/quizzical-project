@@ -7,7 +7,8 @@ import Footer from "/src/components/Footer.jsx"
 function QuizPage() {
 
   const [questionsData, setQuestionsData] = React.useState([])
-  const [userAnswers, setUserAnswers] = React.useState({})
+
+  //Gets question info from API
 
   React.useEffect(function() {
       console.log("effect ran")
@@ -15,6 +16,15 @@ function QuizPage() {
   }, [])
 
   console.log(questionsData)
+
+  //Function to choose an option for each question
+
+  function chooseOption() {
+    console.log(event.target.id)
+  }
+
+
+  //Builds Question components using API info
 
   const questionsElement = questionsData.map(item => {
     return (
@@ -24,9 +34,12 @@ function QuizPage() {
           incorrect={item.incorrect_answers}
           correct={item.correct_answer}
           name={nanoid()}
+          handleClick={chooseOption}
       />
     )
   })
+
+  //Actual component
 
   return (
     <form className="quiz-page-container">
